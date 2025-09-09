@@ -9,7 +9,11 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.skeaner.mybatisbeanbuddy.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-        <postStartupActivity implementation="com.github.skeaner.mybatisbeanbuddy.startup.MyProjectActivity" />
+        <projectConfigurable
+                groupId="tools"
+                key="projectName"
+                id="com.github.skeaner.mybatisbeanbuddy.settings.SettingsConfigurable"
+                instance="com.github.skeaner.mybatisbeanbuddy.settings.SettingsConfigurable"/>
+    
     </extensions>
 </idea-plugin>
